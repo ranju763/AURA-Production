@@ -1,0 +1,18 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts",
+    "build": "bun build src/app.ts --outdir ./dist --minify --target bun",
+    "start": "bun run dist/app.js"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.5",
+    "@supabase/supabase-js": "^2.83.0",
+    "hono": "^4.10.6",
+    "zod": "^4.1.12",
+    "zod-validation-error": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

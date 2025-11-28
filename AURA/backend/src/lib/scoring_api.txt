@@ -1,0 +1,58 @@
+#start a match 
+
+API 1
+=======
+api: http://localhost:8000/api/match/start
+
+give the positions of the players and tell which team is starting the serve, by giving the serve id, and also pass the player ids of position of players
+pos is set as  [
+    (pos_1, pos_3),
+    (pos_2, pos_4)
+]
+
+
+body:
+{   
+    "match_id": 1,
+    "serving_team_id": 1,
+    "positions": {
+        "pos_1": 16, 
+        "pos_2": 13, 
+        "pos_3": 15, 
+        "pos_4": 14 
+    }
+}
+
+output:
+initial point is added, match status is set to in_progress and start time is set, does all the checking's nescessary
+
+API 2
+=======
+api: http://localhost:8000/api/match/point
+
+increaments the scores of rally_winner_team_id
+
+body:
+{ "match_id": 1, 
+"rally_winner_team_id": 1 
+}
+
+output:
+points are addded by pickleball logic, even byes are included
+
+
+API 3
+=======
+api: http://localhost:8000/api/match/undo
+
+goes back to the previous point, just give match id
+
+body:
+{ "match_id": 1
+}
+
+output:
+points are removed even if the particular match is completed, they are removed based on time stamp
+
+
+

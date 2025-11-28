@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  }
+}
