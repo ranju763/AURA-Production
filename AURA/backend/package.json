@@ -2,8 +2,8 @@
   "name": "backend",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "build": "bun build src/app.js --outdir ./dist --minify --target bun",
-    "start": "bun run src/app.js"
+    "build": "bun build src/app.js --outfile dist/app.js --minify --target bun",
+    "start": "bun run dist/app.js"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.5",
