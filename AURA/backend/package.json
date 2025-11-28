@@ -2,7 +2,7 @@
   "name": "backend",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "build": "bun build src/app.ts --outdir ./dist --minify --target bun",
+    "build": "bun build src/index.ts --outdir ./dist --minify --target bun",
     "start": "bun run dist/app.js"
   },
   "dependencies": {
